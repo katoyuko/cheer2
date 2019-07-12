@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     resource :post_cheers, only: [:create, :destroy]
   end
 
+  # adminの名前空間を付与
+  # namespaceは、URLもcontroller格納フォルダも、指定のパスになる
   namespace :admins do
     root "posts#top"
     get "/about" => "posts#about"
